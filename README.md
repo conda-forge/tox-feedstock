@@ -19,9 +19,7 @@ Tox is a generic virtualenv management and test command line tool you can use fo
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tox-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tox-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/tox-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tox-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tox-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tox-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/tox-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tox-feedstock)
 
 Current release info
 ====================
