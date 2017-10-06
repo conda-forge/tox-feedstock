@@ -1,6 +1,6 @@
 {% set name = "tox" %}
-{% set version = "2.9.0" %}
-{% set sha256 = "adb44732982b207424b42f9a2d1e3f80240ecfbba0e374a27ae3779a5a934d0a" %}
+{% set version = "2.9.1" %}
+{% set sha256 = "752f5ec561c6c08c5ecb167d3b20f4f4ffc158c0ab78855701a75f5cef05f4b8" %}
 
 package:
   name: {{ name|lower }}
