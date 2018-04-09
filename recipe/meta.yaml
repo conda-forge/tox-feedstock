@@ -1,6 +1,6 @@
 {% set name = "tox" %}
-{% set version = "2.9.1" %}
-{% set sha256 = "752f5ec561c6c08c5ecb167d3b20f4f4ffc158c0ab78855701a75f5cef05f4b8" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "96efa09710a3daeeb845561ebbe1497641d9cef2ee0aea30db6969058b2bda2f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - tox = tox.session:run_main
@@ -36,6 +36,7 @@ test:
     - tox
   commands:
     - tox --version
+    - tox-quickstart --version
 
 about:
   home: https://github.com/tox-dev/tox
