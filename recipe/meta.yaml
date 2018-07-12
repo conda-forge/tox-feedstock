@@ -1,20 +1,17 @@
-{% set name = "tox" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "96efa09710a3daeeb845561ebbe1497641d9cef2ee0aea30db6969058b2bda2f" %}
+{% set version = "3.1.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: tox
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
+  sha256: 8df73fb0eae939692d67a095c49081b1afb948eca51879e5dc1868d9b0ad11de
 
 build:
-  noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - tox = tox.session:run_main
     - tox-quickstart = tox._quickstart:main
@@ -22,7 +19,7 @@ build:
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - setuptools_scm
   run:
     - python
@@ -30,6 +27,8 @@ requirements:
     - pluggy >=0.3.0,<1.0
     - virtualenv >=1.11.2
     - setuptools
+    - packaging >=17.1
+    - six >=1.0.0,<2
 
 test:
   imports:
