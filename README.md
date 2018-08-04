@@ -19,12 +19,15 @@ Tox is a generic virtualenv management and test command line tool you can use fo
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/tox-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tox-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/tox-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/tox-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tox/badges/version.svg)](https://anaconda.org/conda-forge/tox)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tox/badges/downloads.svg)](https://anaconda.org/conda-forge/tox)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tox-green.svg)](https://anaconda.org/conda-forge/tox) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tox.svg)](https://anaconda.org/conda-forge/tox) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tox.svg)](https://anaconda.org/conda-forge/tox) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tox.svg)](https://anaconda.org/conda-forge/tox) |
 
 Installing tox
 ==============
