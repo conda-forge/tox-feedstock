@@ -23,11 +23,10 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - py >=1.4.17
+    - py >=1.4.17, <2
     - pluggy >=0.3.0,<1.0
     - virtualenv >=1.11.2
-    - setuptools
-    - packaging >=17.1
+    - setuptools >=30.0.0
     - six >=1.0.0,<2
 
 test:
