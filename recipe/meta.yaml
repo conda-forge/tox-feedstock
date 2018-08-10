@@ -21,8 +21,7 @@ requirements:
     - python
     - pip
     - setuptools_scm
-
-run:
+  run:
     - python
     - py >=1.4.17, <2
     - pluggy >=0.3.0,<1.0
