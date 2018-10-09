@@ -1,4 +1,4 @@
-{% set version = "3.2.1" %}
+{% set version = "3.5.0" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: eb61aa5bcce65325538686f09848f04ef679b5cd9b83cc491272099b28739600
+  sha256: 5cd34741ff8ad7170c442d51b4ffe4c1ea721bca8e70bbbdc9e9d818b1e9a435
 
 build:
   number: 0
@@ -28,6 +28,8 @@ requirements:
     - virtualenv >=1.11.2
     - setuptools >=30.0.0
     - six >=1.0.0,<2
+    - toml >=0.9.4
+    - filelock >=3.0.0,<4
 
 test:
   imports:
