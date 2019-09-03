@@ -1,4 +1,4 @@
-{% set version = "3.12.1" %}
+{% set version = "3.14.0" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: f87fd33892a2df0950e5e034def9468988b8d008c7e9416be665fcc0dd45b14f
+  sha256: c4f6b319c20ba4913dbfe71ebfd14ff95d1853c4231493608182f66e566ecfe1
 
 build:
   number: 0
@@ -22,11 +22,12 @@ requirements:
     - pip
     - setuptools_scm
   run:
-    - python
+    - python <3.8
+    - importlib-metadata >=0.12,<1
+    - packaging >=14
     - py >=1.4.17, <2
-    - pluggy >=0.3.0,<1.0
-    - virtualenv >=1.11.2
-    - setuptools >=30.0.0
+    - pluggy >=0.12.0,<1
+    - virtualenv >=14.0.0
     - six >=1.0.0,<2
     - toml >=0.9.4
     - filelock >=3.0.0,<4
