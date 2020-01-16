@@ -21,6 +21,7 @@ requirements:
     - pip
     - setuptools_scm
   run:
+    - python
     - importlib_metadata >=0.12,<2  # [py<38]
     - packaging >=14
     - py >=1.4.17, <2
