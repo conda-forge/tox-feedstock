@@ -9,8 +9,7 @@ source:
   sha256: 06ba73b149bf838d5cd25dc30c2dd2671ae5b2757cf98e5c41a35fe449f131b3
 
 build:
-  number: 0
-  noarch: python
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tox = tox:cmdline
@@ -22,22 +21,25 @@ requirements:
     - pip
     - setuptools_scm
   run:
-    - python <3.8
-    - importlib_metadata >=0.12,<1
+    - importlib_metadata >=0.12,<2  # [py<38]
     - packaging >=14
     - py >=1.4.17, <2
     - pluggy >=0.12.0,<1
-    - virtualenv >=14.0.0
+    - virtualenv >=16.0.0
     - six >=1.0.0,<2
     - toml >=0.9.4
     - filelock >=3.0.0,<4
+    - colorama >=0.4.1  # [win]
 
 test:
+  requires:
+    - pip
   imports:
     - tox
   commands:
     - tox --version
     - tox-quickstart --version
+    - python -m pip check
 
 about:
   home: https://github.com/tox-dev/tox
@@ -53,9 +55,11 @@ about:
       and merging CI and shell-based testing.
   doc_url: https://tox.readthedocs.org
   dev_url: https://github.com/tox-dev/tox
+  doc_source_url: https://github.com/tox-dev/tox/tree/3.14.3/docs
 
 extra:
   recipe-maintainers:
     - cshaley
     - kalefranz
     - sannykr
+    - bollwyvl
