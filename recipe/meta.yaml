@@ -1,4 +1,4 @@
-{% set version = "3.14.6" %}
+{% set version = "3.15.0" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: a4a6689045d93c208d77230853b28058b7513f5123647b67bf012f82fa168303
+  sha256: af09c19478e8fc7ce7555b3d802ddf601b82684b874812c5857f774b8aee1b67
 
 build:
   number: 0
@@ -47,7 +47,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'virtualenv-based automation of test activities'
+  summary: virtualenv-based automation of test activities
   description: |
     Tox is a generic virtualenv management and test command line tool you can use for
     - checking your package installs correctly with different Python versions and interpreters
