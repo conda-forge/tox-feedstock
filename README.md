@@ -5,7 +5,7 @@ Home: https://github.com/tox-dev/tox
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: virtualenv-based automation of test activities
 
