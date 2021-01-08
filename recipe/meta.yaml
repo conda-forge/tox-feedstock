@@ -1,4 +1,4 @@
-{% set version = "3.20.1" %}
+{% set version = "3.21.0" %}
 
 package:
   name: tox
@@ -6,17 +6,17 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: 4321052bfe28f9d85082341ca8e233e3ea901fdd14dab8a5d3fbd810269fbaf6
+  sha256: 8cccede64802e78aa6c69f81051b25f0706639d1cbbb34d9366ce00c70ee054f
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tox = tox:cmdline
     - tox-quickstart = tox._quickstart:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools_scm
