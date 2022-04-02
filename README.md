@@ -1,7 +1,7 @@
 About tox
 =========
 
-Home: https://github.com/tox-dev/tox
+Home: https://tox.wiki
 
 Package license: MIT
 
