@@ -9,25 +9,23 @@ source:
   sha256: 67e0e32c90e278251fea45b696d0fef3879089ccbe979b0c556d35d5a70e2993
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tox = tox:cmdline
     - tox-quickstart = tox._quickstart:main
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
     - setuptools_scm
   run:
     - python
-    - colorama >=0.4.1  # [win]
+    - colorama >=0.4.1
     - filelock >=3.0.0
-    - importlib_metadata >=0.12  # [py<38]
+    - importlib_metadata >=0.12
     - packaging >=14
     - pluggy >=0.12.0
     - py >=1.4.17
