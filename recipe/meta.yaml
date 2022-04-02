@@ -25,15 +25,15 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - importlib_metadata >=0.12,<2  # [py<38]
-    - packaging >=14
-    - py >=1.4.17, <2
-    - pluggy >=0.12.0,<1
-    - virtualenv >=16.0.0, !=20.0.0, !=20.0.1, !=20.0.2, !=20.0.3, !=20.0.4, !=20.0.5, !=20.0.6, !=20.0.7
-    - six >=1.14.0,<2
-    - toml >=0.9.4
-    - filelock >=3.0.0,<4
     - colorama >=0.4.1  # [win]
+    - filelock >=3.0.0
+    - importlib_metadata >=0.12  # [py<38]
+    - packaging >=14
+    - pluggy >=0.12.0
+    - py >=1.4.17
+    - six >=1.14.0
+    - toml >=0.9.4
+    - virtualenv !=20.0.0,!=20.0.1,!=20.0.2,!=20.0.3,!=20.0.4,!=20.0.5,!=20.0.6,!=20.0.7,>=16.0.0
 
 test:
   requires:
@@ -41,9 +41,9 @@ test:
   imports:
     - tox
   commands:
+    - pip check
     - tox --version
     - tox-quickstart --version
-    - python -m pip check
 
 about:
   home: https://github.com/tox-dev/tox
