@@ -51,8 +51,7 @@ test:
   source_files:
     - tests
   requires:
-    - build >=0.9
-    - covdefaults >=2.2.2
+    - python-build >=0.9
     - devpi-process >=0.3
     - diff-cover >=7.2
     - distlib >=0.3.6
