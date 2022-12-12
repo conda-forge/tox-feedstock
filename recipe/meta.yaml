@@ -36,14 +36,19 @@ requirements:
     - typing-extensions >=4.4
     - virtualenv >=20.17.1
 
+
 {% set skip_tests = [
   "find_alias_on_path",
   "get_info_uses_hook_path",
+  "keyboard_interrupt",
+  "local_subprocess",
+  "override_incorrect",
   "parallel_inception",
   "parallel_interrupt",
   "provision_interrupt_child",
   "provision_non_canonical_dep",
   "some_files_exist",
+  "verbosity_guess_miss_match",
 ] | join(" or ") %}
 
 test:
