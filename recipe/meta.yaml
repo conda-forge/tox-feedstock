@@ -13,8 +13,7 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - tox = tox:cmdline
-    - tox-quickstart = tox._quickstart:main
+    - tox = tox.run:run
 
 requirements:
   host:
@@ -35,7 +34,7 @@ requirements:
     - pyproject-api >=1.2.1
     - tomli >=2.0.1
     - typing-extensions >=4.4
-    - virtualenv >=20.17.1    
+    - virtualenv >=20.17.1
 
 {% set skip_tests = [
   "find_alias_on_path",
@@ -71,7 +70,6 @@ test:
     - pip check
     - tox --version
     - tox --help
-    - tox-quickstart --version
     - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=88
 
 about:
