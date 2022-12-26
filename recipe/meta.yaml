@@ -1,4 +1,4 @@
-{% set version = "4.0.16" %}
+{% set version = "4.0.17" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: 968fc4e27110defdf15972893cb15fe1669f338c8408d8835077462fb07e07fe
+  sha256: ff03d29669ce728a395bf6e4da6c3904787c0d3c982a94df9ba5d05f6c126bc4
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - chardet >=5.1
     - colorama >=0.4.6
     - filelock >=3.8.2
-    - importlib-metadata >=5.1
+    - importlib-metadata >=5.2
     - packaging >=22
     - platformdirs >=2.6
     - pluggy >=1
@@ -60,7 +60,7 @@ test:
     - diff-cover >=7.2
     - distlib >=0.3.6
     - flaky >=3.7
-    - hatch-vcs >=0.2.1
+    - hatch-vcs >=0.3
     - hatchling >=1.11.1
     - psutil >=5.9.4
     - pytest >=7.2
