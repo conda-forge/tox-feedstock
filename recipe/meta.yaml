@@ -19,8 +19,8 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - hatchling >=1.11.1
-    - hatch-vcs >=0.2.1
+    - hatchling >=1.12
+    - hatch-vcs >=0.3
   run:
     - python >=3.7
     - cachetools >=5.2
