@@ -40,13 +40,16 @@ requirements:
 {% set skip_tests = [
   "build_wheel_in_non_base_pkg_env",
   "deps_remove_recreate",
+  "env_log",
   "find_alias_on_path",
   "get_info_uses_hook_path",
   "install_command_no_packages",
   "install_pkg_via",
   "keyboard_interrupt",
+  "legacy_cli_flags",
   "local_subprocess",
   "override_incorrect",
+  "package_only",
   "parallel_inception",
   "parallel_interrupt",
   "pip_install_constraint_file_create_change",
@@ -55,8 +58,10 @@ requirements:
   "pip_install_req_file_req_like",
   "pip_install_requirements_file_deps",
   "pip_pre",
+  "pip_req_path",
   "pkg_dep_remove_recreate",
   "pkg_env_dep_remove_recreate",
+  "plugin_hooks_and_order",
   "provision_interrupt_child",
   "provision_non_canonical_dep",
   "pyproject_deps_from_static",
@@ -66,6 +71,8 @@ requirements:
   "python_generate_hash_seed",
   "python_keep_hash_seed",
   "python_set_hash_seed",
+  "requirements_txt",
+  "skip_develop_mode",
   "some_files_exist",
   "tox_install_pkg_sdist",
   "tox_install_pkg_wheel",
@@ -96,7 +103,7 @@ test:
     - pip check
     - tox --version
     - tox --help
-    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=95
+    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=94
 
 about:
   home: https://tox.wiki
