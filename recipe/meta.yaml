@@ -19,17 +19,17 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - hatchling >=1.11.1
-    - hatch-vcs >=0.2.1
+    - hatchling >=1.12
+    - hatch-vcs >=0.3
   run:
     - python >=3.7
     - cachetools >=5.2
     - chardet >=5.1
     - colorama >=0.4.6
-    - filelock >=3.8.2
+    - filelock >=3.9
     - importlib-metadata >=5.2
     - packaging >=22
-    - platformdirs >=2.6
+    - platformdirs >=2.6.2
     - pluggy >=1
     - pyproject-api >=1.2.1
     - tomli >=2.0.1
@@ -61,7 +61,7 @@ test:
     - distlib >=0.3.6
     - flaky >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.11.1
+    - hatchling >=1.12
     - psutil >=5.9.4
     - pytest >=7.2
     - pytest-cov >=4
