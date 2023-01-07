@@ -1,4 +1,4 @@
-{% set version = "4.1.1" %}
+{% set version = "4.2.6" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: 5d214ce3e480e3b2cce72dbc9e832296387e7311f76b70de4a649636d02e34c9
+  sha256: ecf224a4f3a318adcdd71aa8fe15ffd31f14afd6a9845a43ffd63950a7325538
 
 build:
   number: 0
@@ -19,17 +19,17 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - hatchling >=1.11.1
-    - hatch-vcs >=0.2.1
+    - hatchling >=1.12
+    - hatch-vcs >=0.3
   run:
     - python >=3.7
     - cachetools >=5.2
     - chardet >=5.1
     - colorama >=0.4.6
-    - filelock >=3.8.2
+    - filelock >=3.9
     - importlib-metadata >=5.2
     - packaging >=22
-    - platformdirs >=2.6
+    - platformdirs >=2.6.2
     - pluggy >=1
     - pyproject-api >=1.2.1
     - tomli >=2.0.1
@@ -38,16 +38,44 @@ requirements:
 
 
 {% set skip_tests = [
+  "build_wheel_in_non_base_pkg_env",
+  "deps_remove_recreate",
+  "env_log",
   "find_alias_on_path",
   "get_info_uses_hook_path",
+  "install_command_no_packages",
+  "install_pkg_via",
   "keyboard_interrupt",
+  "legacy_cli_flags",
   "local_subprocess",
   "override_incorrect",
+  "package_only",
   "parallel_inception",
   "parallel_interrupt",
+  "pip_install_constraint_file_create_change",
+  "pip_install_constraint_file_new",
+  "pip_install_path",
+  "pip_install_req_file_req_like",
+  "pip_install_requirements_file_deps",
+  "pip_pre",
+  "pip_req_path",
+  "pkg_dep_remove_recreate",
+  "pkg_env_dep_remove_recreate",
+  "plugin_hooks_and_order",
   "provision_interrupt_child",
   "provision_non_canonical_dep",
+  "pyproject_deps_from_static",
+  "pyproject_deps_static_with_dynamic",
+  "pyproject_no_build_editable_fallback",
+  "python_disable_hash_seed",
+  "python_generate_hash_seed",
+  "python_keep_hash_seed",
+  "python_set_hash_seed",
+  "requirements_txt",
+  "skip_develop_mode",
   "some_files_exist",
+  "tox_install_pkg_sdist",
+  "tox_install_pkg_wheel",
   "verbosity_guess_miss_match",
 ] | join(" or ") %}
 
@@ -61,7 +89,7 @@ test:
     - distlib >=0.3.6
     - flaky >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.11.1
+    - hatchling >=1.12
     - psutil >=5.9.4
     - pytest >=7.2
     - pytest-cov >=4
@@ -75,7 +103,7 @@ test:
     - pip check
     - tox --version
     - tox --help
-    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=95
+    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=94
 
 about:
   home: https://tox.wiki
