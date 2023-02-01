@@ -1,4 +1,4 @@
-{% set version = "4.3.5" %}
+{% set version = "4.4.4" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: 307993257d792a12a63ff86a0b67a71a5ab2d4a2cc12bbae947115224d4ac3fb
+  sha256: e1ef01d9e9503b1218511f74517dc3f0008c8b5e0cc53ab7f51ff3c2ca63b349
 
 build:
   number: 0
