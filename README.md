@@ -1,11 +1,11 @@
-About tox
-=========
+About tox-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tox-feedstock/blob/main/LICENSE.txt)
 
 Home: https://tox.wiki
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tox-feedstock/blob/main/LICENSE.txt)
 
 Summary: virtualenv-based automation of test activities
 
