@@ -157,5 +157,6 @@ Feedstock Maintainers
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@cshaley](https://github.com/cshaley/)
 * [@kalefranz](https://github.com/kalefranz/)
+* [@rxm7706](https://github.com/rxm7706/)
 * [@sannykr](https://github.com/sannykr/)
 
