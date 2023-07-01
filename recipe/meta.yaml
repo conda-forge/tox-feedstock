@@ -1,4 +1,4 @@
-{% set version = "4.4.4" %}
+{% set version = "4.6.3" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: e1ef01d9e9503b1218511f74517dc3f0008c8b5e0cc53ab7f51ff3c2ca63b349
+  sha256: 9e2c5091a117d03b583c57c4c40aecd068099c17d40520e7b165e85c19334534
 
 build:
   number: 0
@@ -85,7 +85,7 @@ test:
     - tests
   requires:
     - python-build >=0.9
-    - covdefaults >=2.2.2    
+    - covdefaults >=2.2.2
     - devpi-process >=0.3
     - diff-cover >=7.3
     - distlib >=0.3.6
