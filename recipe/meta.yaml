@@ -1,5 +1,5 @@
 {% set name = "tox" %}
-{% set version = "4.5.2" %}
+{% set version = "4.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,34 +7,34 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
-  sha256: ad87fb7a10ef476afb6eb7e408808057f42976ef0d30ad5fe023099ba493ce58
+  sha256: 9e2c5091a117d03b583c57c4c40aecd068099c17d40520e7b165e85c19334534
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tox = tox.run:run
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
     - python >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.17
+    - hatchling >=1.17.1
     - pip
   run:
     - python >=3.7
-    - cachetools >=5.3
+    - cachetools >=5.3.1
     - chardet >=5.1
     - colorama >=0.4.6
-    - filelock >=3.12
+    - filelock >=3.12.2
     - importlib-metadata >=6.6
     - packaging >=23.1
-    - platformdirs >=3.5.1
+    - platformdirs >=3.5.3
     - pluggy >=1
-    - pyproject-api >=1.5.1
+    - pyproject-api >=1.5.2
     - tomli >=2.0.1
-    - typing-extensions >=4.6.2
+    - typing-extensions >=4.6.3
     - virtualenv >=20.23
 
 
@@ -86,7 +86,7 @@ test:
     - tests
   requires:
     - python-build >=0.9
-    - covdefaults >=2.2.2    
+    - covdefaults >=2.2.2
     - devpi-process >=0.3
     - diff-cover >=7.3
     - distlib >=0.3.6
