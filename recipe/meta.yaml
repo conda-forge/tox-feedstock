@@ -76,6 +76,7 @@ requirements:
   "skip_develop_mode",
   "some_files_exist",
   "test_constrain_package_deps",
+  "test_package_pyproject",
   "tox_install_pkg_sdist",
   "tox_install_pkg_wheel",
   "verbosity_guess_miss_match",
