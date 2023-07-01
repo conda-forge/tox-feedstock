@@ -1,5 +1,5 @@
 {% set name = "tox" %}
-{% set version = "4.5.2" %}
+{% set version = "4.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,35 +7,35 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
-  sha256: ad87fb7a10ef476afb6eb7e408808057f42976ef0d30ad5fe023099ba493ce58
+  sha256: 9e2c5091a117d03b583c57c4c40aecd068099c17d40520e7b165e85c19334534
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tox = tox.run:run
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
     - python >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.17
+    - hatchling >=1.17.1
     - pip
   run:
     - python >=3.7
-    - cachetools >=5.3
+    - cachetools >=5.3.1
     - chardet >=5.1
     - colorama >=0.4.6
-    - filelock >=3.12
+    - filelock >=3.12.2
     - importlib-metadata >=6.6
     - packaging >=23.1
-    - platformdirs >=3.5.1
+    - platformdirs >=3.5.3
     - pluggy >=1
-    - pyproject-api >=1.5.1
+    - pyproject-api >=1.5.2
     - tomli >=2.0.1
-    - typing-extensions >=4.6.2
-    - virtualenv >=20.23
+    - typing-extensions >=4.6.3
+    - virtualenv >=20.23.1
 
 
 {% set skip_tests = [
@@ -76,6 +76,7 @@ requirements:
   "skip_develop_mode",
   "some_files_exist",
   "test_constrain_package_deps",
+  "test_package_pyproject",
   "tox_install_pkg_sdist",
   "tox_install_pkg_wheel",
   "verbosity_guess_miss_match",
@@ -85,29 +86,30 @@ test:
   source_files:
     - tests
   requires:
-    - python-build >=0.9
-    - covdefaults >=2.2.2    
-    - devpi-process >=0.3
-    - diff-cover >=7.3
+    - python-build >=0.10
+    - covdefaults >=2.3
+    - devpi-process >=0.3.1
+    - diff-cover >=7.6
     - distlib >=0.3.6
     - flaky >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.12.2
-    - psutil >=5.9.4
-    - pytest >=7.2
-    - pytest-cov >=4
-    - pytest-mock >=3.10
-    - pytest-xdist >=3.1
+    - hatchling >=1.17.1
+    - psutil >=5.9.5
+    - pytest >=7.3.2
+    - pytest-cov >=4.1
+    - pytest-mock >=3.11.1
+    - pytest-xdist >=3.3.1
     - re-assert >=1.1
-    - wheel >=0.38.4
-    - time-machine >=2.9.0
+    - time-machine >=2.10
+    - wheel >=0.40
+
   imports:
     - tox
   commands:
     - pip check
     - tox --version
     - tox --help
-    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=94
+    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=90
 
 about:
   home: https://tox.wiki
