@@ -1,4 +1,4 @@
-{% set version = "4.3.5" %}
+{% set version = "4.4.4" %}
 
 package:
   name: tox
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: 307993257d792a12a63ff86a0b67a71a5ab2d4a2cc12bbae947115224d4ac3fb
+  sha256: e1ef01d9e9503b1218511f74517dc3f0008c8b5e0cc53ab7f51ff3c2ca63b349
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - packaging >=23
     - platformdirs >=2.6.2
     - pluggy >=1
-    - pyproject-api >=1.4
+    - pyproject-api >=1.5
     - tomli >=2.0.1
     - typing-extensions >=4.4
     - virtualenv >=20.17.1
@@ -74,6 +74,7 @@ requirements:
   "requirements_txt",
   "skip_develop_mode",
   "some_files_exist",
+  "test_constrain_package_deps",
   "tox_install_pkg_sdist",
   "tox_install_pkg_wheel",
   "verbosity_guess_miss_match",
@@ -84,19 +85,21 @@ test:
     - tests
   requires:
     - python-build >=0.9
+    - covdefaults >=2.2.2    
     - devpi-process >=0.3
-    - diff-cover >=7.2
+    - diff-cover >=7.3
     - distlib >=0.3.6
     - flaky >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.12
+    - hatchling >=1.12.2
     - psutil >=5.9.4
     - pytest >=7.2
     - pytest-cov >=4
     - pytest-mock >=3.10
     - pytest-xdist >=3.1
     - re-assert >=1.1
-    - time-machine >=2.8.2
+    - wheel >=0.38.4
+    - time-machine >=2.9.0
   imports:
     - tox
   commands:
