@@ -1,12 +1,13 @@
-{% set version = "4.4.4" %}
+{% set name = "tox" %}
+{% set version = "4.5.2" %}
 
 package:
-  name: tox
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/tox/tox-{{ version }}.tar.gz
-  sha256: e1ef01d9e9503b1218511f74517dc3f0008c8b5e0cc53ab7f51ff3c2ca63b349
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
+  sha256: ad87fb7a10ef476afb6eb7e408808057f42976ef0d30ad5fe023099ba493ce58
 
 build:
   number: 0
@@ -18,23 +19,23 @@ build:
 requirements:
   host:
     - python >=3.7
-    - pip
-    - hatchling >=1.12
     - hatch-vcs >=0.3
+    - hatchling >=1.17
+    - pip
   run:
     - python >=3.7
-    - cachetools >=5.2.1
+    - cachetools >=5.3
     - chardet >=5.1
     - colorama >=0.4.6
-    - filelock >=3.9
-    - importlib-metadata >=6
-    - packaging >=23
-    - platformdirs >=2.6.2
+    - filelock >=3.12
+    - importlib-metadata >=6.6
+    - packaging >=23.1
+    - platformdirs >=3.5.1
     - pluggy >=1
-    - pyproject-api >=1.5
+    - pyproject-api >=1.5.1
     - tomli >=2.0.1
-    - typing-extensions >=4.4
-    - virtualenv >=20.17.1
+    - typing-extensions >=4.6.2
+    - virtualenv >=20.23
 
 
 {% set skip_tests = [
