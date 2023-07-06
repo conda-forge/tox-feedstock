@@ -18,21 +18,21 @@ build:
 
 requirements:
   host:
-    - python >=3.7
     - hatch-vcs >=0.3
     - hatchling >=1.17.1
     - pip
-  run:
     - python >=3.7
+  run:
     - cachetools >=5.3.1
     - chardet >=5.1
     - colorama >=0.4.6
     - filelock >=3.12.2
-    - importlib-metadata >=6.6
+    - importlib_metadata >=6.7
     - packaging >=23.1
-    - platformdirs >=3.5.3
-    - pluggy >=1
+    - platformdirs >=3.8
+    - pluggy >=1.2
     - pyproject-api >=1.5.2
+    - python >=3.7
     - tomli >=2.0.1
     - typing-extensions >=4.6.3
     - virtualenv >=20.23.1
@@ -86,7 +86,6 @@ test:
   source_files:
     - tests
   requires:
-    - python-build >=0.10
     - covdefaults >=2.3
     - devpi-process >=0.3.1
     - diff-cover >=7.6
@@ -95,10 +94,11 @@ test:
     - hatch-vcs >=0.3
     - hatchling >=1.17.1
     - psutil >=5.9.5
-    - pytest >=7.3.2
+    - pytest >=7.4
     - pytest-cov >=4.1
     - pytest-mock >=3.11.1
     - pytest-xdist >=3.3.1
+    - python-build >=0.10
     - re-assert >=1.1
     - time-machine >=2.10
     - wheel >=0.40
