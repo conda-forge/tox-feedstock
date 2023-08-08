@@ -29,13 +29,13 @@ requirements:
     - filelock >=3.12.2
     - importlib_metadata >=6.7
     - packaging >=23.1
-    - platformdirs >=3.8
+    - platformdirs >=3.9.1
     - pluggy >=1.2
-    - pyproject-api >=1.5.2
+    - pyproject-api >=1.5.3
     - python >=3.7
     - tomli >=2.0.1
-    - typing-extensions >=4.6.3
-    - virtualenv >=20.23.1
+    - typing-extensions >=4.7.1
+    - virtualenv >=20.24.1
 
 
 {% set skip_tests = [
