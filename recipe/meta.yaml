@@ -77,6 +77,7 @@ requirements:
   "some_files_exist",
   "test_constrain_package_deps",
   "test_package_pyproject",
+  "test_python_hash_seed_from_env_and_disable",
   "test_python_hash_seed_from_env_and_override",
   "tox_install_pkg_sdist",
   "tox_install_pkg_wheel",
