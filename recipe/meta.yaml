@@ -19,23 +19,23 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.3
-    - hatchling >=1.17.1
+    - hatchling >=1.18
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
     - cachetools >=5.3.1
-    - chardet >=5.1
+    - chardet >=5.2
     - colorama >=0.4.6
     - filelock >=3.12.2
-    - importlib_metadata >=6.7
+    - importlib_metadata >=6.8
     - packaging >=23.1
-    - platformdirs >=3.9.1
+    - platformdirs >=3.10
     - pluggy >=1.2
     - pyproject-api >=1.5.3
-    - python >=3.7
+    - python >=3.8
     - tomli >=2.0.1
     - typing-extensions >=4.7.1
-    - virtualenv >=20.24.1
+    - virtualenv >=20.24.3
 
 
 {% set skip_tests = [
@@ -96,7 +96,7 @@ test:
     - distlib >=0.3.7
     - flaky >=3.7
     - hatch-vcs >=0.3
-    - hatchling >=1.17.1
+    - hatchling >=1.18
     - psutil >=5.9.5
     - pytest >=7.4
     - pytest-cov >=4.1
@@ -104,8 +104,8 @@ test:
     - pytest-xdist >=3.3.1
     - python-build >=0.10
     - re-assert >=1.1
-    - time-machine >=2.10
-    - wheel >=0.40
+    - time-machine >=2.12
+    - wheel >=0.41.1
 
   imports:
     - tox
