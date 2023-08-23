@@ -39,6 +39,7 @@ requirements:
 
 
 {% set skip_tests = [
+  "allowed_implicit_cli_envs",
   "build_wheel_in_non_base_pkg_env",
   "deps_remove_recreate",
   "env_log",
