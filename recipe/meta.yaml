@@ -98,6 +98,7 @@ test:
     - flaky >=3.7
     - hatch-vcs >=0.3
     - hatchling >=1.18
+    - pip
     - psutil >=5.9.5
     - pytest >=7.4
     - pytest-cov >=4.1
