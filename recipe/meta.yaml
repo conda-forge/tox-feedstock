@@ -1,5 +1,5 @@
 {% set name = "tox" %}
-{% set version = "4.11.1" %}
+{% set version = "4.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
-  sha256: 8a8cc94b7269f8e43dfc636eff2da4b33a199a4e575b5b086cc51aae24ac4262
+  sha256: 0ad5c4b2d3d77a29dc5fb3ce01d55748aabc2972d306605da3d84b17729ce8df
 
 build:
   noarch: python
@@ -18,11 +18,12 @@ build:
 
 requirements:
   host:
+    - python >=3.8
     - hatch-vcs >=0.3
     - hatchling >=1.18
     - pip
-    - python >=3.8
   run:
+    - python >=3.8
     - cachetools >=5.3.1
     - chardet >=5.2
     - colorama >=0.4.6
@@ -32,7 +33,6 @@ requirements:
     - platformdirs >=3.10
     - pluggy >=1.3
     - pyproject-api >=1.6.1
-    - python >=3.8
     - tomli >=2.0.1
     - typing-extensions >=4.7.1
     - virtualenv >=20.24.3
@@ -90,7 +90,7 @@ test:
     - tests
   requires:
     - python-build >=0.10
-    #- detect-test-pollution >=1.1.1
+    - detect-test-pollution >=1.1.1
     - covdefaults >=2.3
     - devpi-process >=0.3.1
     - diff-cover >=7.7
