@@ -1,5 +1,5 @@
 {% set name = "tox" %}
-{% set version = "4.11.1" %}
+{% set version = "4.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
-  sha256: 8a8cc94b7269f8e43dfc636eff2da4b33a199a4e575b5b086cc51aae24ac4262
+  sha256: 0ad5c4b2d3d77a29dc5fb3ce01d55748aabc2972d306605da3d84b17729ce8df
 
 build:
   noarch: python
