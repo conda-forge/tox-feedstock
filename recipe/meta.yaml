@@ -114,7 +114,8 @@ test:
     - pip check
     - tox --version
     - tox --help
-    - pytest -vv --cov=tox --no-cov-on-fail --cov-report=term-missing:skip-covered -k "not ({{ skip_tests }})" --cov-fail-under=90
+    - coverage run --source=tox --branch -m pytest -vv --color=yes --tb=long -k "not ({{ skip_tests }})" 
+    - coverage report --show-missing --skip-covered --fail-under=90
 
 about:
   home: https://tox.wiki
