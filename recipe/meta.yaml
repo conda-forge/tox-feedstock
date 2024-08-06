@@ -87,16 +87,17 @@ test:
   source_files:
     - tests
   requires:
-    - python-build >=0.10
-    - detect-test-pollution >=1.1.1
+    # TODO: remove pin when all upstreams `pip check` correctly
+    - pip <24.1
+    # actual test deps
     - covdefaults >=2.3
+    - detect-test-pollution >=1.1.1
     - devpi-process >=0.3.1
     - diff-cover >=7.7
     - distlib >=0.3.7
     - flaky >=3.7
     - hatch-vcs >=0.3
     - hatchling >=1.18
-    - pip
     - psutil >=5.9.5
     - pytest >=7.4
     - pytest-cov >=4.1
