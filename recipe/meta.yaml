@@ -1,5 +1,5 @@
 {% set name = "tox" %}
-{% set version = "4.17.0" %}
+{% set version = "4.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
-  sha256: b1e2e1dfbfdc174d9be95ae78ec2c4d2cf4800d4c15571deddb197a2c90d2de6
+  sha256: 2c41565a571e34480bd401d668a4899806169a4633e972ac296c54406d2ded8a
 
 build:
   noarch: python
@@ -114,7 +114,7 @@ test:
     - pip check
     - tox --version
     - tox --help
-    - coverage run --source=tox --branch -m pytest -vv --color=yes --tb=long -k "not ({{ skip_tests }})" 
+    - coverage run --source=tox --branch -m pytest -vv --color=yes --tb=long -k "not ({{ skip_tests }})"
     - coverage report --show-missing --skip-covered --fail-under=90
 
 about:
