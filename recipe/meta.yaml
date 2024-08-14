@@ -81,6 +81,7 @@ requirements:
   "tox_install_pkg_sdist",
   "tox_install_pkg_wheel",
   "verbosity_guess_miss_match",
+  "test_ini_exhaustive_parallel_values",
 ] | join(" or ") %}
 
 test:
