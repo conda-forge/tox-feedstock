@@ -88,8 +88,7 @@ test:
   source_files:
     - tests
   requires:
-    # TODO: remove pin when all upstreams `pip check` correctly
-    - pip <24.1
+    - pip
     # actual test deps
     - covdefaults >=2.3
     - detect-test-pollution >=1.1.1
