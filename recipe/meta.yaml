@@ -1,5 +1,5 @@
 {% set name = "tox" %}
-{% set version = "4.21.0" %}
+{% set version = "4.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
-  sha256: e64dd9847ff3a7ec90368be412d7efe61a39caf043222ffbe9ad638ea435f6f6
+  sha256: b2ce4222772693b302d75e2e4f7727d67bb60925d740479bb09845098562589f
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ requirements:
     - pyproject-api >=1.8
     - tomli >=2.0.1
     - typing_extensions >=4.12.2
-    - virtualenv >=20.26.3
+    - virtualenv >=20.26.6
 
 
 {% set skip_tests = [
