@@ -34,7 +34,7 @@ requirements:
     - pyproject-api >=1.8
     - tomli >=2.0.1
     - typing_extensions >=4.12.2
-    - virtualenv >=20.26.3
+    - virtualenv >=20.26.6
 
 
 {% set skip_tests = [
