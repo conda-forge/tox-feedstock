@@ -90,7 +90,6 @@ test:
     - tests
   requires:
     - pip
-    - python <3.13
     # actual test deps
     - covdefaults >=2.3
     - detect-test-pollution >=1.1.1
