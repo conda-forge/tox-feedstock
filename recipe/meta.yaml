@@ -108,7 +108,6 @@ test:
     - re-assert >=1.1
     - time-machine >=2.12
     - wheel >=0.41.1
-
   imports:
     - tox
   commands:
