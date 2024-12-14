@@ -57,6 +57,10 @@ SKIPS = [
     "tox_install_pkg_wheel",
     "verbosity_guess_miss_match",
 ]
+
+#: added in https://github.com/conda-forge/tox-feedstock/pull/185
+SKIPS += ["load_dependency_many_extra"]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
