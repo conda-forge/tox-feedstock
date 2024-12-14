@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tox-{{ version }}.tar.gz
   sha256: 86075e00e555df6e82e74cfc333917f91ecb47ffbc868dcafbd2672e332f4a2c
 
 build:
@@ -14,16 +14,16 @@ build:
   entry_points:
     - tox = tox.run:run
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatch-vcs >=0.4
     - hatchling >=1.25
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cachetools >=5.5
     - chardet >=5.2
     - colorama >=0.4.6
@@ -111,6 +111,7 @@ test:
     - re-assert >=1.1
     - time-machine >=2.12
     - wheel >=0.41.1
+    - python {{ python_min }}
   imports:
     - tox
   commands:
