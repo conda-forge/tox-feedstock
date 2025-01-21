@@ -3,7 +3,7 @@ About tox-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tox-feedstock/blob/main/LICENSE.txt)
 
-Home: https://tox.wiki
+Home: https://tox.wiki/
 
 Package license: MIT
 
@@ -11,14 +11,13 @@ Summary: virtualenv-based automation of test activities
 
 Development: https://github.com/tox-dev/tox
 
-Documentation: https://tox.readthedocs.org
+Documentation: https://tox.readthedocs.org/
 
 Tox is a generic virtualenv management and test command line tool you can use for
 - checking your package installs correctly with different Python versions and interpreters
 - running your tests in each of the environments, configuring your test tool of choice
 - acting as a frontend to Continuous Integration servers, greatly reducing boilerplate
-  and merging CI and shell-based testing.
-
+and merging CI and shell-based testing.
 
 Current build status
 ====================
