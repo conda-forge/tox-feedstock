@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 4.24.0
+
+package:
+  name: tox
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
+  sha256: c0adb3968be110a10dc3b6e8f07c1135f450db2f1d9a94476ff10910fa8fd755
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - tox = tox.run:run
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatch-vcs >=0.4
+    - hatchling >=1.25
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - cachetools >=5.5
+    - chardet >=5.2
+    - colorama >=0.4.6
+    - filelock >=3.16.1
+    - packaging >=24.1
+    - platformdirs >=4.3.6
+    - pluggy >=1.5
+    - pyproject-api >=1.8
+    - tomli >=2.0.1
+    - typing_extensions >=4.12.2
+    - virtualenv >=20.26.6
+
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      pip_check: true
+      imports:
+        - tox
+  - files:
+      recipe:
+        - run_test.py
+      source:
+        - tests
+    requirements:
+      run:
+        - python ${{ python_min }}.*
+        - covdefaults >=2.3
+        - detect-test-pollution >=1.1.1
+        - devpi-process >=0.3.1
+        - diff-cover >=7.7
+        - distlib >=0.3.7
+        - flaky >=3.7
+        - hatch-vcs >=0.3
+        - hatchling >=1.18
+        - psutil >=5.9.5
+        - pytest >=7.4
+        - pytest-cov >=4.1
+        - pytest-mock >=3.11.1
+        - pytest-xdist >=3.3.1
+        - python-build >=0.10
+        - re-assert >=1.1
+        - time-machine >=2.12
+        - wheel >=0.41.1
+    script:
+      - tox --version
+      - tox --help
+      - python run_test.py
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: virtualenv-based automation of test activities
+  description: |
+    Tox is a generic virtualenv management and test command line tool you can use for
+    - checking your package installs correctly with different Python versions and interpreters
+    - running your tests in each of the environments, configuring your test tool of choice
+    - acting as a frontend to Continuous Integration servers, greatly reducing boilerplate
+    and merging CI and shell-based testing.
+  homepage: https://tox.wiki
+  repository: https://github.com/tox-dev/tox
+  documentation: https://tox.readthedocs.org
+
+extra:
+  recipe-maintainers:
+    - rxm7706
+    - cshaley
+    - kalefranz
+    - sannykr
+    - bollwyvl
