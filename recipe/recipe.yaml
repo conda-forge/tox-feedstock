@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-  sha256: c0adb3968be110a10dc3b6e8f07c1135f450db2f1d9a94476ff10910fa8fd755
+  sha256: 083a720adbc6166fff0b7d1df9d154f9d00bfccb9403b8abf6bc0ee435d6a62e
 
 build:
   number: 0
@@ -51,7 +51,7 @@ tests:
       recipe:
         - run_test.py
       source:
-        - tests
+        - tests/
     requirements:
       run:
         - covdefaults >=2.3
