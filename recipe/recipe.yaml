@@ -24,11 +24,11 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.4
-    - hatchling >=1.26.3
+    - hatchling >=1.27
     - pip
     - python ${{ python_min }}.*
   run:
-    - cachetools >=5.5
+    - cachetools >=5.5.1
     - chardet >=5.2
     - colorama >=0.4.6
     - filelock >=3.16.1
@@ -37,9 +37,9 @@ requirements:
     - pluggy >=1.5
     - pyproject-api >=1.8
     - python >=${{ python_min }}
-    - tomli >=2.1
+    - tomli >=2.2.1
     - typing_extensions >=4.12.2
-    - virtualenv >=20.27.1
+    - virtualenv >=20.29.1
 
 tests:
   - python:
