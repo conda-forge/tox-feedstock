@@ -43,10 +43,11 @@ requirements:
 
 tests:
   - python:
-      python_version: ${{ python_min }}.*
+      imports: tox
       pip_check: true
-      imports:
-        - tox
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
   - files:
       recipe:
         - run_test.py
