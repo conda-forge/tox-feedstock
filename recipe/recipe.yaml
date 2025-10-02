@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.30.2"
+  version: "4.30.3"
 
 package:
   name: tox
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-  sha256: 772925ad6c57fe35c7ed5ac3e958ac5ced21dff597e76fc40c1f5bf3cd1b6a2e
+  sha256: f3dd0735f1cd4e8fbea5a3661b77f517456b5f0031a6256432533900e34b90bf
 
 build:
   number: 0
