@@ -28,18 +28,18 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - cachetools >=6.1
+    - cachetools >=6.2
     - chardet >=5.2
     - colorama >=0.4.6
-    - filelock >=3.18
+    - filelock >=3.20
     - packaging >=25
-    - platformdirs >=4.3.8
+    - platformdirs >=4.5
     - pluggy >=1.6
     - pyproject-api >=1.9.1
     - python >=${{ python_min }}
-    - tomli >=2.2.1
-    - typing_extensions >=4.14.1
-    - virtualenv >=20.31.2
+    - tomli >=2.3
+    - typing_extensions >=4.5
+    - virtualenv >=20.34
 
 tests:
   - python:
@@ -47,7 +47,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - 3.14.*
   - files:
       recipe:
         - run_test.py
