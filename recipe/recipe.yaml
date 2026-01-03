@@ -3,6 +3,7 @@ schema_version: 1
 
 context:
   version: "4.33.0"
+  python_check_max: "3.14"
 
 package:
   name: tox
@@ -24,22 +25,22 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.5
-    - hatchling >=1.27
+    - hatchling >=1.28
     - pip
     - python ${{ python_min }}.*
   run:
-    - cachetools >=6.2
+    - cachetools >=6.2.4
     - chardet >=5.2
     - colorama >=0.4.6
-    - filelock >=3.20
+    - filelock >=3.20.2
     - packaging >=25
-    - platformdirs >=4.5
+    - platformdirs >=4.5.1
     - pluggy >=1.6
-    - pyproject-api >=1.9.1
+    - pyproject-api >=1.10
     - python >=${{ python_min }}
     - tomli >=2.3
     - typing_extensions >=4.5
-    - virtualenv >=20.34
+    - virtualenv >=20.35.4
 
 tests:
   - python:
@@ -47,7 +48,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.14.*
+        - ${{ python_check_max }}.*
   - files:
       recipe:
         - run_test.py
