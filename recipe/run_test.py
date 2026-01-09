@@ -61,6 +61,14 @@ SKIPS = [
 #: added in https://github.com/conda-forge/tox-feedstock/pull/185
 SKIPS += ["load_dependency_many_extra"]
 
+#: added in https://github.com/conda-forge/tox-feedstock/pull/203
+SKIPS += [
+    "dependency_groups_double_extras",
+    "dependency_groups_duplicate_extras",
+    "dependency_groups_extras"
+    "dependency_groups_nested_extras",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
