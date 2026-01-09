@@ -65,7 +65,7 @@ SKIPS += ["load_dependency_many_extra"]
 SKIPS += [
     "dependency_groups_double_extras",
     "dependency_groups_duplicate_extras",
-    "dependency_groups_extras"
+    "dependency_groups_extras",
     "dependency_groups_nested_extras",
 ]
 
