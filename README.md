@@ -3,7 +3,7 @@ About tox-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tox-feedstock/blob/main/LICENSE.txt)
 
-Home: https://tox.wiki/
+Home: https://pypi.org/project/tox
 
 Package license: MIT
 
