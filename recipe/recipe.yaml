@@ -29,18 +29,18 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - cachetools >=6.2.4
+    - cachetools >=6.2.5
     - chardet >=5.2
     - colorama >=0.4.6
-    - filelock >=3.20.2
-    - packaging >=25
+    - filelock >=3.20.3
+    - packaging >=26
     - platformdirs >=4.5.1
     - pluggy >=1.6
     - pyproject-api >=1.10
     - python >=${{ python_min }}
-    - tomli >=2.3
+    - tomli >=2.4
     - typing_extensions >=4.5
-    - virtualenv >=20.35.4
+    - virtualenv >=20.36.1
 
 tests:
   - python:
@@ -91,7 +91,7 @@ about:
     - running your tests in each of the environments, configuring your test tool of choice
     - acting as a frontend to Continuous Integration servers, greatly reducing boilerplate
     and merging CI and shell-based testing.
-  homepage: https://tox.wiki
+  homepage: https://pypi.org/project/tox
   repository: https://github.com/tox-dev/tox
   documentation: https://tox.readthedocs.org
 
