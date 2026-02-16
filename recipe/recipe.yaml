@@ -29,17 +29,17 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - cachetools >=6.2.5
+    - cachetools >=7.0.1
     - chardet >=5.2
     - colorama >=0.4.6
-    - filelock >=3.20.3
+    - filelock >=3.24
     - packaging >=26
-    - platformdirs >=4.5.1
+    - platformdirs >=4.9.1
     - pluggy >=1.6
     - pyproject-api >=1.10
     - python >=${{ python_min }}
     - tomli >=2.4
-    - typing_extensions >=4.5
+    - typing_extensions >=4.15
     - virtualenv >=20.36.1
 
 tests:
