@@ -71,6 +71,7 @@ SKIPS += [
 
 SKIPS += [
     #: added in https://github.com/conda-forge/tox-feedstock/pull/209
+    "python_hash_seed_via_section_substitution",
     "set_env_cross_section_override",
 ]
 
