@@ -69,6 +69,12 @@ SKIPS += [
     "dependency_groups_nested_extras",
 ]
 
+SKIPS += [
+    #: added in https://github.com/conda-forge/tox-feedstock/pull/209
+    "python_hash_seed_via_section_substitution",
+    "set_env_cross_section_override",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
