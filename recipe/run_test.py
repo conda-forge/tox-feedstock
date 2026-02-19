@@ -75,6 +75,17 @@ SKIPS += [
     "set_env_cross_section_override",
 ]
 
+
+SKIPS += [
+    #: added in https://github.com/conda-forge/tox-feedstock/pull/211
+    "deps_only_no_extras",
+    "deps_only_with_dependency_groups",
+    "deps_only_with_deps",
+    "deps_only_multiple_extras",
+    "deps_only_with_extras",
+    "deps_only_static",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
