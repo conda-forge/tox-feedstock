@@ -86,6 +86,15 @@ SKIPS += [
     "deps_only_static",
 ]
 
+SKIPS += [
+    #: added in https://github.com/conda-forge/tox-feedstock/pull/213
+    "empty_report",
+    "parallel_general",
+    "pylock_empty",
+    "pylock_install",
+    "pylock_no_reinstall_on_rerun",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
