@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.44.0"
+  version: "4.46.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-  sha256: 0c911cbc448a2ac5dd7cbb6be2f9ffa26d0a10405982f9efea654803b23cec77
+  sha256: b9d1aa187101dae184b7e6552f3b1ff85461e9e32f078851426e35a3c2009bc1
 
 build:
   number: 0
@@ -30,17 +30,18 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - cachetools >=7.0.1
-    - chardet >=5.2
     - colorama >=0.4.6
-    - filelock >=3.24
+    - filelock >=3.24.3
     - packaging >=26
-    - platformdirs >=4.9.1
+    - platformdirs >=4.9.2
     - pluggy >=1.6
     - pyproject-api >=1.10
     - python >=${{ python_min }}
     - tomli >=2.4
     - typing_extensions >=4.15
-    - virtualenv >=20.36.1
+    - virtualenv >=20.38
+  run_constraints:
+    - argcomplete >=3.6.3
 
 tests:
   - python:
@@ -54,6 +55,7 @@ tests:
         - run_test.py
       source:
         - tests/
+        - src/tox/tox.schema.json
     requirements:
       run:
         - argcomplete
