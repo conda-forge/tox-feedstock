@@ -40,6 +40,8 @@ requirements:
     - tomli >=2.4
     - typing_extensions >=4.15
     - virtualenv >=20.38
+  run_constraints:
+    - argcomplete >=3.6.3
 
 tests:
   - python:
@@ -53,6 +55,7 @@ tests:
         - run_test.py
       source:
         - tests/
+        - src/tox/tox.schema.json
     requirements:
       run:
         - argcomplete
