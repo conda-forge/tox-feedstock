@@ -54,9 +54,9 @@ tests:
       recipe:
         - run_test.py
       source:
-        - tests/
-        - src/tox.toml
         - src/tox/tox.schema.json
+        - tests/
+        - tox.toml
     requirements:
       run:
         - argcomplete
