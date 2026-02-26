@@ -39,7 +39,7 @@ requirements:
     - python >=${{ python_min }}
     - tomli >=2.4
     - typing_extensions >=4.15
-    - virtualenv >=20.38
+    - virtualenv >=20.39
   run_constraints:
     - argcomplete >=3.6.3
 
@@ -55,6 +55,7 @@ tests:
         - run_test.py
       source:
         - tests/
+        - src/tox.toml
         - src/tox/tox.schema.json
     requirements:
       run:
