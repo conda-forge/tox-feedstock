@@ -95,6 +95,11 @@ SKIPS += [
     "pylock_no_reinstall_on_rerun",
 ]
 
+SKIPS += [
+    #: https://github.com/conda-forge/tox-feedstock/pull/216
+    "exec_passes_stdin_through",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
