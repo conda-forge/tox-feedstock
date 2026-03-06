@@ -38,6 +38,7 @@ requirements:
     - pyproject-api >=1.10
     - python >=${{ python_min }}
     - tomli >=2.4
+    - tomli-w >=1.1
     - typing_extensions >=4.15
     - virtualenv >=20.39
   run_constraints:
