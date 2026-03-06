@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.47.3"
+  version: "4.48.1"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-  sha256: 57643508d4c218ad312457a3b0ce3135c50fa1f9f1e4d40867683d880cad1c37
+  sha256: 971260ac2ea3409de8f3771612d141713d2d33446cc0d981849ebfd9b6bbd3d9
 
 build:
   number: 0
@@ -38,6 +38,7 @@ requirements:
     - pyproject-api >=1.10
     - python >=${{ python_min }}
     - tomli >=2.4
+    - tomli-w >=1.1
     - typing_extensions >=4.15
     - virtualenv >=20.39
   run_constraints:
