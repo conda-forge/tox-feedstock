@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.49.1"
+  version: "4.50.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-  sha256: 4130d02e1d53648d7107d121ed79f69a27b717817c5e9da521d50319dd261212
+  sha256: 1d9c1d678bb5c1a2d59c19ae58df7d033578ac1d91c5625aaa62aac792093401
 
 build:
   number: 0
