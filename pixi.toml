@@ -5,7 +5,7 @@
 
 [workspace]
 name = "tox-feedstock"
-version = "3.56.2"  # conda-smithy version used to generate this file
+version = "3.56.3"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/tox-feedstock"
 authors = ["@conda-forge/tox"]
 channels = ["conda-forge"]

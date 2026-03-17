@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.49.1"
+  version: "4.50.0"
   python_check_max: "3.14"
 
 package:
@@ -10,8 +10,11 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-  sha256: 4130d02e1d53648d7107d121ed79f69a27b717817c5e9da521d50319dd261212
+  - url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
+    sha256: 1d9c1d678bb5c1a2d59c19ae58df7d033578ac1d91c5625aaa62aac792093401
+  - url: https://raw.githubusercontent.com/tox-dev/tox/refs/tags/${{ version }}/docs/man/tox.1.rst
+    sha256: 47e5f394385452b0ad08702257dd604cd14d939f56be09dc838cb136215e91b4
+    target_directory: docs/man
 
 build:
   number: 0
@@ -24,6 +27,7 @@ build:
 
 requirements:
   host:
+    - docutils >=0.21
     - hatch-vcs >=0.5
     - hatchling >=1.29
     - pip
@@ -66,6 +70,7 @@ tests:
         - devpi-process >=1.0.2
         - diff-cover >=9.6
         - distlib >=0.4
+        - docutils >=0.21
         - flaky >=3.8.1
         - hatch-vcs >=0.4
         - hatchling >=1.26.3
