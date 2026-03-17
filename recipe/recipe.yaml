@@ -24,6 +24,7 @@ build:
 
 requirements:
   host:
+    - docutils >=0.21
     - hatch-vcs >=0.5
     - hatchling >=1.29
     - pip
@@ -66,6 +67,7 @@ tests:
         - devpi-process >=1.0.2
         - diff-cover >=9.6
         - distlib >=0.4
+        - docutils >=0.21
         - flaky >=3.8.1
         - hatch-vcs >=0.4
         - hatchling >=1.26.3
