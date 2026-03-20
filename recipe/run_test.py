@@ -100,6 +100,11 @@ SKIPS += [
     "exec_passes_stdin_through",
 ]
 
+SKIPS += [
+    #: https://github.com/conda-forge/tox-feedstock/pull/226
+    "build_wheel_in_free_threaded_pkg_env",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
