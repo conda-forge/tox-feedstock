@@ -105,6 +105,11 @@ SKIPS += [
     "build_wheel_in_free_threaded_pkg_env",
 ]
 
+SKIPS += [
+    #: https://github.com/conda-forge/tox-feedstock/pull/228
+    "manpage",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
