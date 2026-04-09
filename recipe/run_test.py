@@ -110,6 +110,12 @@ SKIPS += [
     "manpage",
 ]
 
+SKIPS += [
+    #: https://github.com/conda-forge/tox-feedstock/pull/229
+    "pip_resolution_env_var_change_reinstalls",
+    "pip_non_resolution_env_var_change_no_reinstall",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
