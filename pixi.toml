@@ -5,7 +5,7 @@
 
 [workspace]
 name = "tox-feedstock"
-version = "3.60.0"  # conda-smithy version used to generate this file
+version = "3.61.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/tox-feedstock"
 authors = ["@conda-forge/tox"]
 channels = ["conda-forge"]
@@ -13,9 +13,9 @@ platforms = ["linux-64", "osx-64", "win-64"]
 requires-pixi = ">=0.59.0"
 
 [dependencies]
-conda-build = ">=24.1"
-conda-forge-ci-setup = "4.*"
-rattler-build = "*"
+conda-build = "*"
+conda-forge-ci-setup = "*"
+rattler-build = "<0.62"
 
 [tasks.inspect-all]
 cmd = "inspect_artifacts --all-packages"
