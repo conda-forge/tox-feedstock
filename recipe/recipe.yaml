@@ -61,6 +61,7 @@ tests:
         - run_test.py
       source:
         - src/tox/tox.schema.json
+        - src/tox/config/loader/toml/_replace.py
         - tests/
         - tox.toml
     requirements:
