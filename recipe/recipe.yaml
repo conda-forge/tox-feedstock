@@ -65,29 +65,30 @@ tests:
         - tox.toml
     requirements:
       run:
-        - argcomplete
+        - argcomplete >=3.6.3
         - covdefaults >=2.3
         - detect-test-pollution >=1.2
-        - devpi-process >=1.0.2
-        - diff-cover >=9.6
+        - devpi-process >=1.1.1
+        - diff-cover >=10.2
         - distlib >=0.4
         - docutils >=0.21
         - flaky >=3.8.1
-        - hatch-vcs >=0.4
-        - hatchling >=1.26.3
-        - pdm-backend
+        - hatch-vcs >=0.5
+        - hatchling >=1.29
+        - pdm-backend >=2.4.7
         - pip
-        - psutil >=7
-        - pytest >=8.4.1
-        - pytest-cov >=5
-        - pytest-mock >=3.14.1
+        - psutil >=7.2.2
+        - pytest >=9.0.2
+        - pytest-cov >=7
+        - pytest-mock >=3.15.1
         - pytest-xdist >=3.8
         - python ${{ python_min }}.*
         - python-build >=1.2.2.post1
         - re-assert >=1.1
-        - setuptools >=80.9
-        - time-machine >=2.16
-        - wheel >=0.45.1
+        - setuptools >=81,<82
+        - time-machine >=3.2
+        - tombi >=0.11.3
+        - wheel >=0.46.3
     script:
       - tox --version
       - tox --help
