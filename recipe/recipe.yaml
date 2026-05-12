@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.53.1"
+  version: "4.54.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-    sha256: 7be9805ed4a34242510c7acc9a7e3a01a35942e08f31f8bd69067c3a37130afc
+    sha256: 21e36fd8256590379620848d0b03b52f4d541b65b749de1a17c3e616978dad58
   - url: https://raw.githubusercontent.com/tox-dev/tox/refs/tags/${{ version }}/docs/man/tox.1.rst
     sha256: 07b26314bce15e7834a9e960ce95c98d6ac5c06df0cd7fc322dc2df065c7dd03
     target_directory: docs/man
@@ -61,33 +61,35 @@ tests:
         - run_test.py
       source:
         - src/tox/tox.schema.json
+        - src/tox/config/loader/toml/_replace.py
         - tests/
         - tox.toml
     requirements:
       run:
-        - argcomplete
+        - argcomplete >=3.6.3
         - covdefaults >=2.3
         - detect-test-pollution >=1.2
-        - devpi-process >=1.0.2
-        - diff-cover >=9.6
+        - devpi-process >=1.1.1
+        - diff-cover >=10.2
         - distlib >=0.4
         - docutils >=0.21
         - flaky >=3.8.1
-        - hatch-vcs >=0.4
-        - hatchling >=1.26.3
-        - pdm-backend
+        - hatch-vcs >=0.5
+        - hatchling >=1.29
+        - pdm-backend >=2.4.7
         - pip
-        - psutil >=7
-        - pytest >=8.4.1
-        - pytest-cov >=5
-        - pytest-mock >=3.14.1
+        - psutil >=7.2.2
+        - pytest >=9.0.2
+        - pytest-cov >=7
+        - pytest-mock >=3.15.1
         - pytest-xdist >=3.8
         - python ${{ python_min }}.*
         - python-build >=1.2.2.post1
         - re-assert >=1.1
-        - setuptools >=80.9
-        - time-machine >=2.16
-        - wheel >=0.45.1
+        - setuptools >=81,<82
+        - time-machine >=3.2
+        - tombi >=0.11.3
+        - wheel >=0.46.3
     script:
       - tox --version
       - tox --help
