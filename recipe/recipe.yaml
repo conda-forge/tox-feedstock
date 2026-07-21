@@ -62,11 +62,11 @@ tests:
       source:
         - src/tox/tox.schema.json
         - src/tox/config/loader/toml/_replace.py
-        - tests/
         - tox.toml
+        - tests/
     requirements:
       run:
-        - argcomplete >=3.6.3
+        - argcomplete
         - covdefaults >=2.3
         - detect-test-pollution >=1.2
         - devpi-process >=1.1.1
@@ -84,7 +84,7 @@ tests:
         - pytest-mock >=3.15.1
         - pytest-xdist >=3.8
         - python ${{ python_min }}.*
-        - python-build >=1.2.2.post1
+        - python-build >=1.4
         - re-assert >=1.1
         - setuptools >=81,<82
         - time-machine >=3.2
