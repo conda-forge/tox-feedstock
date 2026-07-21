@@ -17,7 +17,7 @@ source:
     target_directory: docs/man
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -66,6 +66,9 @@ tests:
         - tests/
     requirements:
       run:
+        - pytest-timeout
+        - python ${{ python_min }}.*
+        # actual test deps
         - argcomplete
         - covdefaults >=2.3
         - detect-test-pollution >=1.2
@@ -83,7 +86,6 @@ tests:
         - pytest-cov >=7
         - pytest-mock >=3.15.1
         - pytest-xdist >=3.8
-        - python ${{ python_min }}.*
         - python-build >=1.4
         - re-assert >=1.1
         - setuptools >=81,<82

@@ -4,7 +4,7 @@ from subprocess import call
 FAIL_UNDER = "90"
 COV = ["coverage"]
 RUN = ["run", "--source=tox", "--branch", "-m"]
-PYTEST = ["pytest", "-vv", "--color=yes", "--tb=long"]
+PYTEST = ["pytest", "-vv", "--color=yes", "--tb=long", "--timeout=60"]
 REPORT = ["report", "--show-missing", "--skip-covered", f"--fail-under={FAIL_UNDER}"]
 
 SKIPS = [
