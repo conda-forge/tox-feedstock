@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.64.10"
+  version: "4.65.2"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-    sha256: 7482b96fefe1e4b49e406a9a62b25b415690bec2cebe9cc0cd59e38af88ce671
+    sha256: 6bbac6aca06f21aec1e5c840b8428c49d7d03511bf9bb52c02612c064deb764d
   - url: https://raw.githubusercontent.com/tox-dev/tox/refs/tags/${{ version }}/docs/man/tox.1.rst
     sha256: 3ffddef1478ff599043487582415dea91024d14e624a210a7fd33e4aa0ccdabc
     target_directory: docs/man
@@ -49,6 +49,14 @@ requirements:
     - argcomplete >=3.6.3
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/conda/test-files/tox/**
+        - share/man/man1/tox.1
+      site_packages:
+        - tox/**
+        - tox-${{ version }}.dist-info/**
   - python:
       imports: tox
       pip_check: true
@@ -59,10 +67,12 @@ tests:
       recipe:
         - run_test.py
       source:
-        - src/tox/tox.schema.json
+        - docs/plugin/getting_started.rst
+        - docs/plugin/howto.rst
         - src/tox/config/loader/toml/_replace.py
-        - tox.toml
+        - src/tox/tox.schema.json
         - tests/
+        - tox.toml
     requirements:
       run:
         - pytest-timeout
