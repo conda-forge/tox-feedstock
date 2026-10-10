@@ -49,6 +49,14 @@ requirements:
     - argcomplete >=3.6.3
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/conda/test-files/tox/**
+        - share/man/man1/tox.1
+      site_packages:
+        - tox/**
+        - tox-${{ version }}.dist-info/**
   - python:
       imports: tox
       pip_check: true
@@ -59,10 +67,12 @@ tests:
       recipe:
         - run_test.py
       source:
-        - src/tox/tox.schema.json
+        - docs/plugin/getting_started.rst
+        - docs/plugin/howto.rst
         - src/tox/config/loader/toml/_replace.py
-        - tox.toml
+        - src/tox/tox.schema.json
         - tests/
+        - tox.toml
     requirements:
       run:
         - pytest-timeout
