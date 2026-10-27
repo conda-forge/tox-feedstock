@@ -28,6 +28,7 @@ build:
 requirements:
   host:
     - docutils >=0.21
+    - hatch-fancy-pypi-readme >=25.1
     - hatch-vcs >=0.5
     - hatchling >=1.29
     - pip
