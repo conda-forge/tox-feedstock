@@ -42,7 +42,7 @@ requirements:
     - pluggy >=1.6
     - pyproject-api >=1.10
     - python >=${{ python_min }}
-    - python-discovery >=1.4.4
+    - python-discovery >=1.9
     - tomli-w >=1.2
     - typing_extensions >=4.15
     - virtualenv >=21.1
