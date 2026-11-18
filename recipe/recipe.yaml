@@ -33,6 +33,7 @@ requirements:
     - hatchling >=1.29
     - pip
     - python ${{ python_min }}.*
+    - python-sbom >=0.1.2
   run:
     - cachetools >=7.0.3
     - colorama >=0.4.6
