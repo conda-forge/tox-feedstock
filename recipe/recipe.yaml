@@ -2,8 +2,9 @@
 schema_version: 1
 
 context:
-  version: "4.67.13"
+  version: "4.67.15"
   python_check_max: "3.15"
+  unlink_tests: docs/test_manpage.py
 
 package:
   name: tox
@@ -11,7 +12,7 @@ package:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/t/tox/tox-${{ version }}.tar.gz
-    sha256: 9f70b44ca2e31d91d8fe2e2917f505554950adc3961c0ee70bb42db16d903f62
+    sha256: 70307cf6cc0a328ca766dc8c20939c697af48d4df2d4bd0c93531eb3be50295d
   - url: https://raw.githubusercontent.com/tox-dev/tox/refs/tags/${{ version }}/docs/man/tox.1.rst
     sha256: 62b70e6349f4ef88ee8f2423aba78ccf1da979c9d71ae6fdc903f2beb9562abd
     target_directory: docs/man
@@ -21,6 +22,7 @@ build:
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --check-build-dependencies --disable-pip-version-check
+    - ${{ PYTHON }} -c "import os; [[print(p), os.unlink(f'tests/{p}')] for p in ${{ unlink_tests | split }}]"
   python:
     entry_points:
       - tox = tox.run:run
@@ -33,6 +35,7 @@ requirements:
     - hatchling >=1.29
     - pip
     - python ${{ python_min }}.*
+    - python-sbom >=0.1.2
   run:
     - cachetools >=7.0.3
     - colorama >=0.4.6
