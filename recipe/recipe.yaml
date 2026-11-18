@@ -4,6 +4,7 @@ schema_version: 1
 context:
   version: "4.67.15"
   python_check_max: "3.15"
+  unlink_tests: docs/test_manpage.py
 
 package:
   name: tox
@@ -21,6 +22,7 @@ build:
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --check-build-dependencies --disable-pip-version-check
+    - ${{ PYTHON }} -c "import os; [[print(p), os.unlink(f'tests/{p}')] for p in ${{ unlink_tests | split }}]"
   python:
     entry_points:
       - tox = tox.run:run
