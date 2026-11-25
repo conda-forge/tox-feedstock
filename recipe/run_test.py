@@ -116,6 +116,11 @@ SKIPS += [
     "pip_non_resolution_env_var_change_no_reinstall",
 ]
 
+SKIPS += [
+    #: https://github.com/conda-forge/tox-feedstock/pull/285 
+    "(provision_requirement_entry_cannot_change_lines and line-break)",
+]
+
 SKIP_OR = " or ".join(SKIPS)
 K = ["-k", f"not ({SKIP_OR})"]
 
